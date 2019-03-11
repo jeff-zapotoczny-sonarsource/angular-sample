@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Usage
 
+Make sure you have node.js 8.9 or higher along with npm 5.5.1 or higher available on your path. Additionally, the test configuration for this project expects Google Chrome to be installed.
+
 Run `build.sh`, which will first use the Angular CLI to run unit tests against the project and then invoke the sonar scanner.
 
 ## Development server
