@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-sample';
+
+  doStuff() {
+    alert("I did stuff");
+  }
+
+  doOtherStuff() {
+    try {
+      for (let i = 0; i < 50; i++) {
+        console.log('looping for no good reason');
+      }
+      alert("I did other stuff");
+    } catch (e) {
+      throw e;
+    }
+  }
 }
