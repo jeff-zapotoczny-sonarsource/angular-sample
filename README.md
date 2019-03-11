@@ -10,4 +10,4 @@ Run `build.sh`, which will first use the Angular CLI to run unit tests against t
 
 ## Development server
 
-If you're curious to see what this sample app does, run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+If you're curious to see what this sample app does, run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. If the `ng` command is not found, it's probably because you don't have the Angular CLI installed globally. In this case, fist run `npm install` and then run `./node_modules/.bin/ng serve`.
