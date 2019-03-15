@@ -12,14 +12,9 @@ export class AppComponent {
     alert("I did stuff");
   }
 
-  doOtherStuff() {
-    try {
-      for (let i = 0; i < 50; i++) {
-        console.log('looping for no good reason');
-      }
-      alert("I did other stuff");
-    } catch (e) {
-      throw e;
-    }
+  public doOtherStuff() {
+    var a = [1, 2, 3];
+    var b = a.reverse(); // Noncompliant
   }
+
 }
