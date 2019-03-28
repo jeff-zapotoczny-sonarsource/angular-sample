@@ -22,4 +22,16 @@ export class AppComponent {
       throw e;
     }
   }
+
+  doEvenMoreStuff() {
+    if (1 == NaN)
+    {
+    alert('even more');
+    }
+
+    const password = 'foo';
+
+    console.log(password);
+    console.log('more logging');
+  }
 }
