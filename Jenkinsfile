@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         withSonarQubeEnv('SQServer') {
-          withNPM(npmrcConfig: 'MyNPMRC') {
+          withNPM(npmrcConfig: 'my-npmrc') {
             script {
               //sh "printenv"
               // fetch master from origin so sonar scanner comparison works
