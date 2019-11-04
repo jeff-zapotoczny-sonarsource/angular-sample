@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         withSonarQubeEnv('SQServer') {
-          withNPM() {
+          //withNPM() {
             script {
               //sh "printenv"
               // fetch master from origin so sonar scanner comparison works
@@ -17,7 +17,7 @@ pipeline {
                 sh "sonar-scanner -Dmaven.test.failure.ignore clean verify sonar:sonar"
 	      }
 	    }
-          }
+          //}
         }
       }
     }
