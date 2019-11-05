@@ -12,6 +12,8 @@ pipeline {
               sh "npm install"
               sh "./node_modules/.bin/ng test --code-coverage"
 
+              def scannerHome = tool 'SQScanner';
+	      
               if (env.CHANGE_ID) {
                 // scan like a pull request
                 sh "${scannerHome}/bin/sonar-scanner -Dsonar.pullrequest.branch=${CHANGE_BRANCH} -Dsonar.pullrequest.key=${CHANGE_ID} -Dsonar.pullrequest.base=master"
