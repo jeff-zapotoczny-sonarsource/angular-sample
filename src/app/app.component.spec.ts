@@ -14,12 +14,6 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
   it(`should have as title 'angular-sample'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
@@ -46,7 +40,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    // finds and clicks the first <a> tag bound to doStuff()
+    // finds and clicks the second <a> tag bound to doOtherStuff()
     compiled.querySelector('#doOtherStuff').click();
     fixture.detectChanges();
   });
