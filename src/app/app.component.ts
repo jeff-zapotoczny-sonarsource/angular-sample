@@ -13,13 +13,6 @@ export class AppComponent {
   }
 
   doOtherStuff() {
-    try {
-      for (let i = 0; i < 50; i++) {
-        console.log('looping for no good reason');
-      }
-      alert("I did other stuff");
-    } catch (e) {
-      throw e;
-    }
+    alert("I did other stuff");
   }
 }
