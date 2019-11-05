@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        withSonarQubeEnv('SQ80') {
+        withSonarQubeEnv(installationName: 'SQ80', credentialsId: 'sq-80-token') {
           nodejs(nodeJSInstallationName: 'recent node') {
             script {
               //sh "printenv"
