@@ -27,19 +27,12 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to angular-sample!');
   });
 
-  it('should do stuff', () => {
+  it('should do lots of stuff', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     // finds and clicks the first <a> tag bound to doStuff()
     compiled.querySelector('a').click();
-    fixture.detectChanges();
-  });
-
-  it('should do other stuff', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
     // finds and clicks the second <a> tag bound to doOtherStuff()
     compiled.querySelector('#doOtherStuff').click();
     fixture.detectChanges();
