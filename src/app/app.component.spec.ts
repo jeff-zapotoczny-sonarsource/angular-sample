@@ -42,4 +42,13 @@ describe('AppComponent', () => {
     fixture.detectChanges();
   });
 
+  it('should do other stuff', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    // finds and clicks the first <a> tag bound to doStuff()
+    compiled.querySelector('#doOtherStuff').click();
+    fixture.detectChanges();
+  });
+
 });
