@@ -14,9 +14,9 @@ pipeline {
 
               if (env.CHANGE_ID) {
                 // scan like a pull request
-                sh "sonar-scanner -Dsonar.pullrequest.branch=${CHANGE_BRANCH} -Dsonar.pullrequest.key=${CHANGE_ID} -Dsonar.pullrequest.base=master"
+                sh "${scannerHome}/bin/sonar-scanner -Dsonar.pullrequest.branch=${CHANGE_BRANCH} -Dsonar.pullrequest.key=${CHANGE_ID} -Dsonar.pullrequest.base=master"
               } else if (env.BRANCH_NAME=="master") {
-                sh "sonar-scanner -Dmaven.test.failure.ignore clean verify sonar:sonar"
+                sh "${scannerHome}/bin/sonar-scanner -Dmaven.test.failure.ignore clean verify sonar:sonar"
 	      }
 	    }
           }
